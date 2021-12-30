@@ -13,7 +13,7 @@ const typeDefs = `
         products: [Products]
     }
 `
-
+//resolver faux
 // const resolvers = {
 //     Query: {
 //         info: () => `this is the api of I use`
