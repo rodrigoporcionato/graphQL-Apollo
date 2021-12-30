@@ -1,10 +1,12 @@
+
+
 var sql = require('mssql');
 var connect = function (){
 
     var conn = new sql.ConnectionPool({
-        user: 'sa',
-        password: 'P@ss5961',
-        server: 'host.docker.internal',
+        user: process.env.db_user,
+        password: process.env.db_password,        
+        server: process.env.db_server,
         database: 'TESTDB',
         trustServerCertificate: true
     });
