@@ -2,7 +2,7 @@
     "taskDefinitionArn": "arn:aws:ecs:us-east-2:827608510590:task-definition/first-run-task-definition:1",
     "containerDefinitions": [
         {
-            "name": "sample-app",
+            "name": "container-api-gql",
             "image": "httpd:2.4",
             "cpu": 256,
             "memoryReservation": 512,
