@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "product api ",
   "main": "server.js",
-  "scripts": {    
+  "scripts": {
     "local": "set NODE_ENV=local&& node server.js",
-    "uat": "set NODE_ENV=uat&& node server.js",   
+    "uat": "set NODE_ENV=uat&& node server.js",
     "prod": "set NODE_ENV=production&& node server.js"
   },
   "author": "rodrigo",
