@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:827608510590:task-definition/first-run-task-definition:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:827608510590:task-definition/first-run-task-definition:2",
     "containerDefinitions": [
         {
             "name": "sample-app",
@@ -23,22 +23,32 @@
                 "/bin/sh -c \"echo '<html> <head> <title>Amazon ECS Sample App</title> <style>body {margin-top: 40px; background-color: #333;} </style> </head><body> <div style=color:white;text-align:center> <h1>Amazon ECS Sample App</h1> <h2>Congratulations!</h2> <p>Your application is now running on a container in Amazon ECS.</p> </div></body></html>' >  /usr/local/apache2/htdocs/index.html && httpd-foreground\""
             ],
             "environment": [],
+            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
+            "secrets": [],
+            "dnsServers": [],
+            "dnsSearchDomains": [],
+            "extraHosts": [],
+            "dockerSecurityOptions": [],
+            "dockerLabels": {},
+            "ulimits": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-group": "/ecs/first-run-task-definition",
                     "awslogs-region": "us-east-2",
                     "awslogs-stream-prefix": "ecs"
-                }
-            }
+                },
+                "secretOptions": []
+            },
+            "systemControls": []
         }
     ],
     "family": "first-run-task-definition",
     "executionRoleArn": "arn:aws:iam::827608510590:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 2,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -50,6 +60,9 @@
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
@@ -71,7 +84,16 @@
     ],
     "cpu": "256",
     "memory": "512",
-    "registeredAt": "2021-12-30T19:53:04.839Z",
+    "registeredAt": "2021-12-30T20:56:21.020Z",
     "registeredBy": "arn:aws:iam::827608510590:root",
-    "tags": []
+    "tags": [
+        {
+            "key": "ecs:taskDefinition:createdFrom",
+            "value": "ecs-console-v2"
+        },
+        {
+            "key": "ecs:taskDefinition:stackId",
+            "value": "arn:aws:cloudformation:us-east-2:827608510590:stack/ECS-Console-V2-TaskDefinition-2ef76b36-1167-4bce-a0ba-7dd3833da6d6/edb2dca0-69b2-11ec-879a-02be0e4e0986"
+        }
+    ]
 }
